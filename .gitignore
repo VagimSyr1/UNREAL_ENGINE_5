@@ -1,0 +1,80 @@
+# ============================================
+# Unreal Engine 5 — .gitignore для совместной разработки
+# ============================================
+
+# Visual Studio
+.vs/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.VC.opendb
+.vsconfig
+
+# Скомпилированные объектные файлы
+*.slo
+*.lo
+*.o
+*.obj
+*.gch
+*.pch
+
+# Библиотеки и исполняемые файлы
+*.so
+*.dylib
+*.dll
+*.lai
+*.la
+*.a
+*.lib
+*.exe
+*.out
+*.app
+*.ipa
+
+# Xcode (генерируются движком)
+*.xcodeproj
+*.xcworkspace
+
+# ===== КРИТИЧНО: папки Unreal Engine =====
+# Скомпилированные бинарники (пересобираются из исходников)
+Binaries/
+Plugins/**/Binaries/
+
+# Временные файлы сборки
+Intermediate/
+Plugins/**/Intermediate/
+
+# Локальные сохранения, логи, настройки редактора
+Saved/
+
+# Кэш движка (пересоздаётся при открытии проекта)
+DerivedDataCache/
+
+# Артефакты сборки
+Build/
+# Разрешаем только PakBlacklist
+!Build/*/
+Build/*/**
+!Build/*/PakBlacklist*.txt
+!Build/**/*.ico
+
+# Скомпилированные данные карт
+*_BuiltData.uasset
+
+# Исходные арты (опционально — раскомментируйте, если не храните в репо)
+# SourceArt/**/*.png
+# SourceArt/**/*.tga
+
+# Логи и отладочная информация
+*.log
+*.tmp
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store

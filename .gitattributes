@@ -1,0 +1,23 @@
+# ============================================
+# Git LFS — большие бинарные файлы Unreal Engine
+# Устанавливает указатели вместо самих файлов (рекомендуется для совместной работы)
+# ============================================
+# Установите Git LFS: https://git-lfs.com/
+# Затем в папке проекта: git lfs install
+
+*.uasset filter=lfs diff=lfs merge=lfs -text
+*.umap   filter=lfs diff=lfs merge=lfs -text
+
+# Опционально — тяжёлые исходники (раскомментируйте при необходимости):
+# *.fbx   filter=lfs diff=lfs merge=lfs -text
+# *.png   filter=lfs diff=lfs merge=lfs -text
+# *.tga   filter=lfs diff=lfs merge=lfs -text
+# *.psd   filter=lfs diff=lfs merge=lfs -text
+
+# Автоматическая нормализация концов строк (для .ini, .cpp, .h и т.д.)
+* text=auto
+*.ini text
+*.cpp text
+*.h text
+*.c text
+*.cs text
